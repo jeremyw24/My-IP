@@ -10,7 +10,8 @@ Uses netifaces python package to read status of the ethernet adaptors.
 
 ##For Use on Raspberry Pi
 Requires Python2.7 Dev Tools: `sudo apt-get install python2.7-dev`
-Requires netifaces library: `sudo apt-get install netifaces`
+Requires pip installer: `sudo apt-get install python-pip`
+Requires netifaces library: `pip install netifaces`
 
 ##License
 See LICENSE for specific information. Script is released under GNU Public License v2.0
