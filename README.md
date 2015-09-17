@@ -12,6 +12,11 @@ Uses netifaces python package to read status of the ethernet adaptors.
 * Requires Python2.7 Dev Tools: `sudo apt-get install python2.7-dev`
 * Requires pip installer: `sudo apt-get install python-pip`
 * Requires netifaces library: `pip install netifaces`
+###Disable Login Prompt on Raspberry Pi
+* Edit inittab file: `sudo nano /etc/inittab`
+* Comment out the following line: `1:2345:respawn:/sbin/getty 115200 tty1`
+* Add new respawn line: `1:2345:respawn:/bin/login -f pi tty1 </dev/tty1 >/dev/tty1 2>&1`
+* Save & Exit, Reboot. Pi should login to `pi@hostname ~$` prompt.
 
 ##License
 See LICENSE for specific information. Script is released under GNU Public License v2.0
