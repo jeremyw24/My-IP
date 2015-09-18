@@ -20,7 +20,8 @@ def log_ip_address(sc):
   for ifaceName in interfaces():
       addresses = [i['addr'] for i in ifaddresses(ifaceName).setdefault(AF_INET, [{'addr':'No IP addr'}] )]
       logging.info('%s: %s' % (ifaceName, ', '.join(addresses)))
-      sc.enter(60,1,log_ip_address,(sc,))
+      sc.enter(1,60,log_ip_address,(sc,))
+      time.sleep(40)
 
 # Need to add escape clause. 
 # Need to add log message when IP Address is lost.
