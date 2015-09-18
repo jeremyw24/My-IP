@@ -12,6 +12,7 @@ Uses netifaces python package to read status of the ethernet adaptors.
 * Requires Python2.7 Dev Tools: `sudo apt-get install python2.7-dev`
 * Requires pip installer: `sudo apt-get install python-pip`
 * Requires netifaces library: `pip install netifaces`
+
 ###Disable Login Prompt on Raspberry Pi
 * Edit inittab file: `sudo nano /etc/inittab`
 * Comment out the following line: `1:2345:respawn:/sbin/getty 115200 tty1`
